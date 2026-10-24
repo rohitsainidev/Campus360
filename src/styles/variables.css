@@ -1,0 +1,31 @@
+:root {
+  /* Campus360 Green Palette */
+  --color-primary: #5CAC32;
+  --color-primary-hover: #4B9228;
+  --color-primary-light: #F0FDF4;
+  --color-icon: #5CAC32;
+  --color-page-bg: #F8FAFC;
+  --color-card-bg: #FFFFFF;
+  --color-text-main: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+  --color-border: #E2E8F0;
+  --color-success: #15803D;
+  --color-warning: #B45309;
+  --color-error: #DC2626;
+  --color-information: #2563EB;
+  --color-accent-orange: #FA5A2A;
+  --color-accent-orange-hover: #E5481B;
+  --color-accent-orange-light: #FFF4EE;
+}
+
+body {
+  background-color: var(--color-page-bg);
+  color: var(--color-text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}

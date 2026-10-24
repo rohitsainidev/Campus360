@@ -1,0 +1,53 @@
+export const ROUTES = {
+  PUBLIC: {
+    HOME: '/',
+    ABOUT: '/about',
+    SERVICES: '/services',
+    CONTACT: '/contact',
+  },
+  AUTH: {
+    PORTALS: '/login',
+    LOGIN: '/login',
+    LOGIN_STUDENT: '/login/student',
+    LOGIN_TEACHER: '/login/teacher',
+    LOGIN_STAFF: '/login/staff',
+    LOGIN_ADMIN: '/login/admin',
+    REGISTER: '/register',
+    REGISTER_STUDENT: '/register/student',
+    FORGOT_PASSWORD: '/forgot-password',
+  },
+  DASHBOARD: {
+    PREVIEW: '/dashboard-preview',
+  },
+  STUDENT: {
+    DASHBOARD: '/student/dashboard',
+    PROFILE: '/student/profile',
+    ATTENDANCE: '/student/attendance',
+    ASSIGNMENTS: '/student/assignments',
+    COMPLAINTS: '/student/complaints',
+    HOSTEL: '/student/hostel',
+    LIBRARY: '/student/library',
+    PLACEMENTS: '/student/placements',
+  },
+  TEACHER: {
+    DASHBOARD: '/teacher/dashboard',
+    STUDENTS: '/teacher/students',
+    ATTENDANCE: '/teacher/attendance',
+    ASSIGNMENTS: '/teacher/assignments',
+  },
+  STAFF: {
+    DASHBOARD: '/staff/dashboard',
+    TASKS: '/staff/tasks',
+    MAINTENANCE: '/staff/maintenance',
+  },
+  ADMIN: {
+    DASHBOARD: '/admin/dashboard',
+    USERS: '/admin/users',
+    DEPARTMENTS: '/admin/departments',
+    COMPLAINTS: '/admin/complaints',
+    HOSTEL: '/admin/hostel',
+    LIBRARY: '/admin/library',
+    PLACEMENTS: '/admin/placements',
+    REPORTS: '/admin/reports',
+  },
+};
