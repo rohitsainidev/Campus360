@@ -9,9 +9,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-3 md:col-span-2 max-w-md">
             <Link to="/" className="flex items-center gap-2">
-              <GraduationCap className="h-6 w-6 text-[#5CAC32]" strokeWidth={2} />
+              <GraduationCap className="h-6 w-6 text-[#2563EB]" strokeWidth={2} />
               <span className="font-bold text-base tracking-tight text-[#0F172A]">
-                Campus<span className="text-[#5CAC32]">360</span>
+                Campus<span className="text-[#2563EB]">360</span>
               </span>
             </Link>
             <p className="text-xs text-[#475569] leading-relaxed">
@@ -26,22 +26,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-[#475569]">
               <li>
-                <Link to="/" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/" className="hover:text-[#2563EB] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/about" className="hover:text-[#2563EB] transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/services" className="hover:text-[#2563EB] transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/contact" className="hover:text-[#2563EB] transition-colors">
                   Contact
                 </Link>
               </li>
@@ -55,22 +55,22 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-[#475569]">
               <li>
-                <Link to="/login/student" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/login" className="hover:text-[#2563EB] transition-colors">
                   Student Portal
                 </Link>
               </li>
               <li>
-                <Link to="/login/teacher" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/login" className="hover:text-[#2563EB] transition-colors">
                   Teacher Portal
                 </Link>
               </li>
               <li>
-                <Link to="/login/staff" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/login" className="hover:text-[#2563EB] transition-colors">
                   Maintenance Staff Portal
                 </Link>
               </li>
               <li>
-                <Link to="/login/admin" className="hover:text-[#5CAC32] transition-colors">
+                <Link to="/login" className="hover:text-[#2563EB] transition-colors">
                   Administrator Console
                 </Link>
               </li>

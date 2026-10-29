@@ -47,7 +47,7 @@ export default function Input({
           } ${rightElement ? 'pr-10' : ''} ${
             error
               ? 'border-[#DC2626] focus:border-[#DC2626] focus:ring-[#DC2626]'
-              : 'border-[#E2E8F0] hover:border-slate-300 focus:border-[#4F46E5] focus:ring-[#4F46E5]'
+              : 'border-[#E2E8F0] hover:border-slate-300 focus:border-[#2563EB] focus:ring-[#2563EB]'
           } ${className}`}
           {...props}
         />

@@ -1,10 +1,10 @@
 :root {
-  /* Campus360 Green Palette */
-  --color-primary: #5CAC32;
-  --color-primary-hover: #4B9228;
-  --color-primary-light: #F0FDF4;
-  --color-icon: #5CAC32;
-  --color-page-bg: #F8FAFC;
+  /* Campus360 Royal Blue Brand Palette */
+  --color-primary: #2563EB;
+  --color-primary-hover: #1D4ED8;
+  --color-primary-light: #EFF6FF;
+  --color-icon: #2563EB;
+  --color-page-bg: #FAFBFC;
   --color-card-bg: #FFFFFF;
   --color-text-main: #0F172A;
   --color-text-secondary: #475569;

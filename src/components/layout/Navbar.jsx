@@ -18,6 +18,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Automatically close mobile menu on route navigation
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
+
   const navLinks = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
@@ -25,21 +30,31 @@ export default function Navbar() {
     { label: 'Contact', path: '/contact' },
   ];
 
+  const isTransparentPage =
+    location.pathname === '/' ||
+    location.pathname === '/about' ||
+    location.pathname === '/services' ||
+    location.pathname === '/contact';
+
   return (
     <header
       className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-        isScrolled
+        mobileMenuOpen
+          ? 'bg-white border-b border-slate-200 shadow-sm'
+          : isScrolled
           ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/90 shadow-xs'
-          : 'bg-white border-b border-transparent shadow-none'
+          : isTransparentPage
+          ? 'bg-transparent border-b border-transparent shadow-none'
+          : 'bg-white/85 backdrop-blur-md border-b border-slate-200/90 shadow-none'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <GraduationCap className="h-6 w-6 text-[#5CAC32]" strokeWidth={2} />
+            <GraduationCap className="h-6 w-6 text-[#2563EB]" strokeWidth={2} />
             <span className="font-bold text-base tracking-tight text-[#0F172A]">
-              Campus<span className="text-[#5CAC32]">360</span>
+              Campus<span className="text-[#2563EB]">360</span>
             </span>
           </Link>
 
@@ -51,10 +66,10 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-3.5 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                  className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-colors ${
                     isActive
-                      ? 'text-[#5CAC32] bg-emerald-50/70 font-semibold'
-                      : 'text-[#475569] hover:text-[#0F172A] hover:bg-slate-50'
+                      ? 'text-[#2563EB] bg-blue-50/90 font-semibold'
+                      : 'text-[#334155] hover:text-[#0F172A] hover:bg-white/60'
                   }`}
                 >
                   {link.label}
@@ -65,10 +80,11 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/login">
-              <Button variant="primary" size="sm">
-                Access Portals
-              </Button>
+            <Link
+              to="/login"
+              className="inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-semibold px-4 py-2 rounded-full shadow-xs hover:shadow transition-all cursor-pointer"
+            >
+              Access Portals
             </Link>
           </div>
 
@@ -90,7 +106,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-[#E2E8F0] bg-white px-4 pt-3 pb-5 space-y-2">
+        <div className="md:hidden border-t border-[#E2E8F0] bg-white px-4 pt-3 pb-5 space-y-2 shadow-lg">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
             return (
@@ -98,21 +114,23 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`block px-3 py-2 rounded-lg text-sm font-medium ${
                   isActive
-                    ? 'text-[#5CAC32] bg-emerald-50 font-semibold'
-                    : 'text-[#475569] hover:text-[#0F172A] hover:bg-slate-50'
+                    ? 'text-[#2563EB] bg-blue-50 font-semibold'
+                    : 'text-[#475569] hover:bg-slate-50'
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-          <div className="pt-3 border-t border-[#E2E8F0]">
-            <Link to="/login" onClick={() => setMobileMenuOpen(false)}>
-              <Button variant="primary" size="sm" className="w-full">
-                Access Portals
-              </Button>
+          <div className="pt-2 border-t border-slate-100">
+            <Link
+              to="/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-full shadow-xs transition-all"
+            >
+              Access Portals
             </Link>
           </div>
         </div>

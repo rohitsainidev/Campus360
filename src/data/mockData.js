@@ -402,11 +402,7 @@ export const studentCampusEvents = [
   },
 ];
 
-/**
- * =============================================================================
- * Phase 5: Teacher Portal Mock Data (Dr. Sarah Patel - FAC-104)
- * =============================================================================
- */
+// Teacher Portal Mock Data (Dr. Sarah Patel - FAC-104)
 
 export const initialTeacherProfile = {
   id: 'FAC-104',
@@ -1048,11 +1044,7 @@ export const initialTeacherAttendanceRecords = {
   },
 };
 
-/**
- * =============================================================================
- * Phase 6: Maintenance Staff Portal Mock Data (Michael Chen - STF-029)
- * =============================================================================
- */
+// Maintenance Staff Portal Mock Data (Michael Chen - STF-029)
 
 export const initialStaffProfile = {
   id: 'STF-029',
@@ -1492,11 +1484,7 @@ export const staffRecentActivities = [
   },
 ];
 
-/**
- * =============================================================================
- * Phase 7: Administrators Portal Mock Data (Elena Rostova - ADM-001)
- * =============================================================================
- */
+// Administrators Portal Mock Data (Elena Rostova - ADM-001)
 
 export const initialAdminProfile = {
   id: 'ADM-001',
