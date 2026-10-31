@@ -35,14 +35,14 @@ export default function Sidebar({
           <Link to="/" className="flex items-center gap-2 group">
             <div className={`h-7.5 w-7.5 rounded-lg flex items-center justify-center text-white shadow-2xs group-hover:scale-105 transition-transform ${
               isAdmin
-                ? 'bg-gradient-to-tr from-[#5CAC32] to-[#4B9228]'
+                ? 'bg-gradient-to-tr from-[#2563EB] to-[#1D4ED8]'
                 : 'bg-gradient-to-tr from-indigo-700 to-indigo-500'
             }`}>
               <GraduationCap className="h-4 w-4" />
             </div>
             <div>
               <span className="font-bold text-xs tracking-tight text-[#0F172A] block leading-tight">
-                Campus<span className={isAdmin ? 'text-[#5CAC32]' : 'text-[#4F46E5]'}>360</span>
+                Campus<span className={isAdmin ? 'text-[#2563EB]' : 'text-[#4F46E5]'}>360</span>
               </span>
               <span className="text-[9px] text-[#64748B] font-semibold uppercase tracking-wider block">
                 {title}
@@ -55,7 +55,7 @@ export default function Sidebar({
             type="button"
             onClick={onClose}
             className={`lg:hidden p-1.5 rounded-lg text-[#64748B] hover:text-[#0F172A] hover:bg-slate-100 focus:outline-none focus:ring-2 ${
-              isAdmin ? 'focus:ring-[#5CAC32]/20' : 'focus:ring-[#4F46E5]/20'
+              isAdmin ? 'focus:ring-[#2563EB]/20' : 'focus:ring-[#4F46E5]/20'
             }`}
             aria-label="Close navigation sidebar"
           >
@@ -87,14 +87,14 @@ export default function Sidebar({
                   `flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all group ${
                     isActive
                       ? isAdmin
-                        ? 'bg-[#5CAC32]/10 text-[#5CAC32] font-semibold shadow-2xs'
+                        ? 'bg-blue-50 text-[#2563EB] font-semibold shadow-2xs'
                         : 'bg-indigo-50/90 text-[#4F46E5] font-semibold shadow-2xs'
                       : 'text-[#475569] hover:text-[#0F172A] hover:bg-slate-50'
                   }`
                 }
               >
                 {Icon && (
-                  <Icon className="h-4 w-4 shrink-0 transition-transform group-hover:scale-105" />
+                  <Icon className={`h-4 w-4 shrink-0 transition-transform group-hover:scale-105 ${item.iconColor || ''}`} />
                 )}
                 <span className="truncate">{item.name}</span>
               </NavLink>

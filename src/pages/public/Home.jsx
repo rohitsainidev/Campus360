@@ -65,7 +65,7 @@ export default function Home() {
           detail: 'Automated subject-wise calculations notify students well before examination cutoffs.',
         },
         {
-          stat: '< 1 min',
+          stat: '1 min',
           label: 'Digital Admit Card Generation',
           detail: 'Automated financial and attendance verification issues hall tickets instantly.',
         },
@@ -99,7 +99,7 @@ export default function Home() {
       ],
       metrics: [
         {
-          stat: '< 15s',
+          stat: '15s',
           label: 'Lecture Roll Call Speed',
           detail: 'Mark session attendance per batch with real-time sync to student dashboards.',
         },
@@ -143,7 +143,7 @@ export default function Home() {
       ],
       metrics: [
         {
-          stat: '< 4 hrs',
+          stat: '4 hrs',
           label: 'Hostel Repair Turnaround',
           detail: 'High-priority routing for urgent electrical, plumbing, and network grievances.',
         },

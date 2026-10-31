@@ -150,14 +150,14 @@ export default function DashboardLayout({
                 type="button"
                 onClick={() => setShowNotificationsDemo(!showNotificationsDemo)}
                 className={`relative p-2 rounded-lg text-[#64748B] hover:text-[#0F172A] hover:bg-slate-100 transition-all focus:outline-none focus:ring-2 ${
-                  currentRole === 'admin' ? 'focus:ring-[#5CAC32]/20' : 'focus:ring-[#4F46E5]/20'
+                  currentRole === 'admin' ? 'focus:ring-[#2563EB]/20' : 'focus:ring-[#4F46E5]/20'
                 }`}
                 aria-label="Demo notifications, 2 unread"
                 aria-expanded={showNotificationsDemo}
               >
                 <Bell className="h-4.5 w-4.5" />
                 <span className={`absolute top-1.5 right-1.5 h-2 w-2 rounded-full ring-2 ring-white ${
-                  currentRole === 'admin' ? 'bg-[#5CAC32]' : 'bg-[#4F46E5]'
+                  currentRole === 'admin' ? 'bg-[#2563EB]' : 'bg-[#4F46E5]'
                 }`} />
               </button>
 
@@ -203,7 +203,7 @@ export default function DashboardLayout({
               <div className="relative">
                 <div className={`h-7.5 w-7.5 rounded-full text-white flex items-center justify-center font-semibold text-xs shadow-xs ${
                   currentRole === 'admin'
-                    ? 'bg-gradient-to-tr from-[#5CAC32] to-[#4B9228]'
+                    ? 'bg-gradient-to-tr from-[#2563EB] to-[#1D4ED8]'
                     : 'bg-gradient-to-tr from-indigo-600 to-indigo-500'
                 }`}>
                   {currentUser.name ? currentUser.name.split(' ').map(n => n[0]).slice(0, 2).join('') : 'U'}
